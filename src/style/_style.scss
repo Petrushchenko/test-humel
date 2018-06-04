@@ -1,0 +1,42 @@
+$blue-color: #4960d2;
+$yellow-color: #fff200;
+$orange-color-1: rgba(255,153,48,1);
+$orange-color-2: rgba(255,141,82,1);
+$light-blue-color: #f4f8ff;
+
+body {
+	padding:0;
+}
+.body-wrapper {
+	width: 100%;
+	min-height:100vh;
+	overflow: hidden;
+	padding:0;
+	margin: 0;
+	background-color: $light-blue-color;
+	border-top: 4px solid $blue-color;
+	border-bottom: 4px solid $yellow-color;
+}
+.container {
+	width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.section {
+	background-color: #FFF;
+    padding: 40px;
+}
+.welcome {
+	&__title {
+		margin-bottom: 0.5em;
+	    line-height: 1.25;
+	    color: #333;
+	    font-size: 24px;
+	    font-weight: 400;
+	    text-align: center;
+	}
+	&__videoblock {
+		background-color: #FFF;
+    	padding: 40px;
+	}
+}
