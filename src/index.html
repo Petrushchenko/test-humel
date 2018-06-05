@@ -5,6 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>test task</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 
 	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
@@ -15,6 +18,7 @@
 	<div class="body-wrapper">
 		<div class="container">
 			<section class="section welcome">
+				<img src="images/rectangles.png">
 				<h1 class="welcome__title">
 					<strong>Смотри видео и узнай,</strong><br>
 					чего Ожидать от Мастер-Класса,<br>
@@ -23,24 +27,30 @@
 					в Калькуляторе под видео
 				</h1>
 				<div class="welcome__videoblock">
-					<iframe width="100%" class="youplay" src="https://www.youtube.com/embed/EMbX5wqjwJg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" style="height: 470.4px;"></iframe>
+					<iframe width="100%" height="auto" class="youplay" src="https://www.youtube.com/embed/EMbX5wqjwJg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" ></iframe>
 					<div class="dashboard">
 						<div class="dashboard__item">
-							<span class="fa fa-calendar-alt fa-1x"></span>
-							<div>Дата
-								<span><span><b>14.06.18</b></span></span>
+							<div class="item__config">
+								<span class="fa fa-calendar-alt fa-1x"></span>
+								<div>Дата<br>
+									<span><b>14.06.18</b></span>
+								</div>
+							</div>	
+						</div>
+						<div class="dashboard__item">
+							<div class="item__config">
+								<span  class="fa fa-clock fa-1x"></span>
+								<div>Время<br>
+									<span><b>20:00 МКС/Киев</b></span>
+								</div>
 							</div>
 						</div>
 						<div class="dashboard__item">
-							<span  class="fa fa-clock fa-1x"></span>
-							<div>Время
-								<span><b>20:00 МКС/Киев</b></span>
-							</div>
-						</div>
-						<div class="dashboard__item">
-							<span class=" fa fa-link fa-1x"></span>
-							<div>Ссылка
-								<a href="#"><b>Вход в мастер-класс</b></a>
+							<div class="item__config">
+								<span class=" fa fa-link fa-1x"></span>
+								<div>Ссылка<br>
+									<a href="#"><b>Вход в мастер-класс</b></a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -236,7 +246,6 @@
 							<h2>Скачайте и распечатайте<br> этот бланк для записей<br> во время мастер-класса.</h2>
 							<p style="margin: 15px 0;">Он поможет упорядочить полученные<br> знания.</p>
 						</span>
-						
 						<img src="images/blank.png">
 					</div>
 					<a class="button" href="images/pdf-upd.pdf" download="">Скачать бланк</a>
@@ -276,7 +285,13 @@
 		</footer>
 	</div>
 	<script>
-		                $("#slider").slider();
+		function setVideo(){
+			var video = $('.youplay');
+			var wdth = video.width();
+			video.css('height', wdth * 0.56);
+			console.log(wdth);
+		}
+		setVideo();
            
     </script>
 </body>
