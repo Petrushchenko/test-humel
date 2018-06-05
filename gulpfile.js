@@ -4,7 +4,6 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     imagemin = require('gulp-imagemin'),
     cssmin = require('gulp-clean-css'),
-    watch = require('gulp-watch'),
     autoprefixer = require('gulp-autoprefixer');
     
 var path = {
@@ -72,18 +71,10 @@ gulp.task('fonts', function() {
 
 gulp.task('build', ['html', 'scripts', 'styles', 'fonts', 'images']);
 
-/*gulp.task('watch', function(){
-   	return watch(path.watch.html, { ignoreInitial: false })
-   		.pipe(gulp.dest(path.build.html)),
+gulp.task('watch', function(){
+    gulp.watch(path.watch.style, ['styles']); 
+    gulp.watch(path.watch.html, ['html']); 
+    gulp.watch(path.watch.img, ['images']);
+  });
 
-   		watch(path.watch.style, { ignoreInitial: false })
-   		.pipe(gulp.dest(path.build.css)),
-
-   		watch(path.watch.img, { ignoreInitial: false })
-   		.pipe(gulp.dest(path.build.img)),
-
-   		watch(path.watch.js, { ignoreInitial: false })
-   		.pipe(gulp.dest(path.build.js)); 
- });*/
-
-gulp.task('default', ['build']);
+gulp.task('default', ['build', 'watch']);

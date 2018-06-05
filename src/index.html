@@ -5,6 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>test task</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.js"></script>
 </head>
 <body>
 	<div class="body-wrapper">
@@ -18,12 +23,261 @@
 					в Калькуляторе под видео
 				</h1>
 				<div class="welcome__videoblock">
-					
+					<iframe width="100%" class="youplay" src="https://www.youtube.com/embed/EMbX5wqjwJg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" style="height: 470.4px;"></iframe>
+					<div class="dashboard">
+						<div class="dashboard__item">
+							<span class="fa fa-calendar-alt fa-1x"></span>
+							<div>Дата
+								<span><span><b>14.06.18</b></span></span>
+							</div>
+						</div>
+						<div class="dashboard__item">
+							<span  class="fa fa-clock fa-1x"></span>
+							<div>Время
+								<span><b>20:00 МКС/Киев</b></span>
+							</div>
+						</div>
+						<div class="dashboard__item">
+							<span class=" fa fa-link fa-1x"></span>
+							<div>Ссылка
+								<a href="#"><b>Вход в мастер-класс</b></a>
+							</div>
+						</div>
+					</div>
 				</div>
 				
 			</section>
-			
+			<section class="section goods">
+				<div class="step1"></div>
+				<div class="goods__wrapper">
+					<div class="goods__caption">
+						<p>Узнай, сколько ты будешь зарабатывать, если закажешь эти товары в Китае и будешь продавать их у себя в городе или стране:</p>
+					</div>
+					<div class="goods__calculator">
+						<div class="goods__items">
+							<div class="goods__item item">
+								<input data-prod="0" checked="" type="radio" name="prod" id="inp1">
+								<label for="inp1">
+                                    <span class="item__img">
+                                        <img src="images/0.jpg" alt="">
+                                    </span>
+                                    <span>JBL колонки ($10)</span>
+                                </label>
+							</div>
+							<div class="goods__item item">
+								<input data-prod="1" type="radio" name="prod" id="inp2">
+								<label for="inp2">
+                                    <span class="item__img">
+                                        <img src="images/1.jpg" alt="">
+                                    </span>
+                                   <span>Перчатка-антишерсть ($3)</span>
+                                </label>
+							</div>
+							<div class="goods__item item">
+								<input data-prod="2" type="radio" name="prod" id="inp3">
+								<label for="inp3">
+                                    <span class="item__img">
+                                        <img src="images/2.jpg" alt="">
+                                    </span>
+                                   <span>Фитнесс-браслет ($11)</span>
+                                </label>
+							</div>
+							<div class="goods__item item">
+								<input data-prod="3" type="radio" name="prod" id="inp4">
+								<label for="inp4">
+                                    <span class="item__img">
+                                        <img src="images/3.jpg" alt="">
+                                    </span>
+                                   <span>Рюкзак-антивор ($9)</span>
+                                </label>
+							</div>
+							<div class="goods__item item">
+								<input data-prod="4" type="radio" name="prod" id="inp5">
+								<label for="inp5">
+                                    <span class="item__img">
+                                        <img src="images/4.jpg" alt="">
+                                    </span>
+                                   <span>3D доска для рисования Magic Drawing Board ($6.5)</span>
+                                </label>
+							</div>
+							<div class="goods__item item">
+								<input data-prod="5" type="radio" name="prod" id="inp6">
+								<label for="inp6">
+                                    <span class="item__img">
+                                        <img src="images/5.jpg" alt="">
+                                    </span>
+                                  <span>USB шейкер ($10,2)</span>
+                                </label>
+							</div>
+							<div class="goods__item item">
+								<input data-prod="6" type="radio" name="prod" id="inp7">
+								<label for="inp7">
+                                    <span class="item__img">
+                                        <img src="images/6.jpg" alt="">
+                                    </span>
+                                  <span>Беспроводная bluetooth колонка CoolDog ($12)</span>
+                                </label>
+							</div>
+							<div class="goods__item item">
+								<input data-prod="7" type="radio" name="prod" id="inp8">
+								<label for="inp8">
+                                    <span class="item__img">
+                                        <img src="images/7.jpg" alt="">
+                                    </span>
+                                 	<span>Увлажнитель воздуха Mini Humidifier ($4,8)</span>
+                                </label>
+							</div>
+							<div class="goods__item item">
+								<input data-prod="8" type="radio" name="prod" id="inp9">
+								<label for="inp9">
+                                    <span class="item__img">
+                                        <img src="images/8.jpg" alt="">
+                                    </span>
+                                 	<span>Фитнесс резинки ($2,69)</span>
+                                </label>
+							</div>
+							<div class="goods__item item">
+								<input data-prod="9" type="radio" name="prod" id="inp10">
+								<label for="inp10">
+                                    <span class="item__img">
+                                        <img src="images/9.jpg" alt="">
+                                    </span>
+                                 	<span>Коврик для мытья кистей (Makeup brush cleaners) ($0,72)</span>
+                                </label>
+							</div>
+						</div>
+						<div>
+                            <h2>ВЫБЕРИТЕ СТРАНУ ДЛЯ ПРОДАЖИ (ДОСТАВКА)</h2>
+                            <select name="country" id="country">
+                                <option value="ru">Россия</option>
+                                <option value="ua">Украина</option>
+                                <option value="kz">Казахстан</option>
+                            </select>
+                        </div>
+                        <div>
+                            <h2>Выберите сумму вашей инвестиции</h2>
+                            <div id="slider-range-min" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                            	<div class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min" style="width: 0%;"></div>
+                            	<span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span>
+                            </div>
+                            <div id="slider_pimps">
+                            	<span onclick="setVal(0)">0</span>
+                            	<span onclick="setVal(1000)">1000</span>
+                            	<span onclick="setVal(2000)">2000</span>
+                            	<span onclick="setVal(3000)">3000</span>
+                            	<span onclick="setVal(4000)">4000</span>
+                            	<span onclick="setVal(5000)">5000</span>
+                            	<span onclick="setVal(6000)">6000</span>
+                            	<span onclick="setVal(7000)">7000</span>
+                            	<span onclick="setVal(8000)">8000</span>
+                            	<span onclick="setVal(9000)">9000</span>
+                            	<span onclick="setVal(10000)">10000</span>
+                            </div>
+                        </div>
+                        <div class="calc_info_items">
+                            <div class="calc_info_item">
+                                <h3>Ваша инвестиция:</h3>
+                                <p id="amount">$0</p>
+                            </div>
+                            <div class="calc_info_item hide-sm">
+                                <h3>Затраты на закупку и доставку товара:</h3>
+                                <p id="prod_delivery">$0</p>
+                            </div>
+                            <div class="calc_info_item hide-sm">
+                                <h3>Затраты на рекламу:</h3>
+                                <p id="prod_marketing">$0</p>
+                            </div>
+                            <div class="calc_info_item">
+                                <h3>Доход с продаж:</h3>
+                                <p id="prod_market_price">$0</p>
+                            </div>
+                            <div class="main_calc">
+                                <h3>Чистая прибыль:</h3>
+                                <p id="result">$0</p>
+                                <p>Ваша чистая прибыль после продажи всей партии товара</p>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</section>
+			<section class="section calendar">
+				<div class="step2"></div>
+				<div class="block">
+					<div class="block__img">
+						<img src="images/calendar.png">
+						<h2>Кликните по синей кнопке, чтобы добавить напоминание в свой календарь о начале мастер-класса:
+						</h2>
+					</div>
+					<button class="g-btn_l addeventatc calendar__button button" id="addeventatc1" title="" aria-haspopup="true" aria-expanded="false" tabindex="0" style="visibility: visible; z-index: auto;">Добавить напоминание
+                        <span class="start atc_node">06/14/2018 20:00</span>
+                        <span class="end atc_node">06/14/2018 22:00</span>
+                        <span class="timezone atc_node">Europe/Kiev</span>
+                        <span class="title atc_node">Мастер-класс: "“Как создать бизнес на продаже новинок из Китая”"</span>
+                        <span class="description atc_node">Тренинг по публичным выступлениям</span>
+                    	<span class="addeventatc_icon atc_node"></span>
+                    	<span id="addeventatc1-drop" class="addeventatc_dropdown" aria-hidden="true" aria-labelledby="addeventatc1" style="display: none; left: 0px; top: 55px;">
+                    		<span class="ateappleical" id="addeventatc1-appleical" role="menuitem">Apple Calendar</span>
+                    		<span class="ategoogle" id="addeventatc1-google" role="menuitem">Google <em>(online)</em></span>
+                    		<span class="ateoutlook" id="addeventatc1-outlook" role="menuitem">Outlook</span>
+                    		<span class="ateoutlookcom" id="addeventatc1-outlookcom" role="menuitem">Outlook.com <em>(online)</em></span>
+                    		<span class="ateyahoo" id="addeventatc1-yahoo" role="menuitem">Yahoo <em>(online)</em></span>
+                    		<em class="copyx"><em class="brx"></em>
+                    		<em class="frs"><a href="https://www.addevent.com" title="" tabindex="-1" id="addeventatc1-home">AddEvent.com</a></em></em>
+                    	</span>
+               		</button>
+               		<script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async="" defer=""></script>
+				</div>
+			</section>
+			<section class="section blank">
+				<div class="step3"></div>
+				<div class="block">
+					<div class="block__img">
+						<span>
+							<h2>Скачайте и распечатайте<br> этот бланк для записей<br> во время мастер-класса.</h2>
+							<p style="margin: 15px 0;">Он поможет упорядочить полученные<br> знания.</p>
+						</span>
+						
+						<img src="images/blank.png">
+					</div>
+					<a class="button" href="images/pdf-upd.pdf" download="">Скачать бланк</a>
+				</div>	
+			</section>
 		</div>
+		<footer class="footer">
+            <div class="container">
+                <div class="footer__grid grid">
+                    <div class="grid__item">
+                        <img class="" src="images/logo-footer.png" alt="" title="">
+                        <div class="phones">
+                            <p>
+                            	<a href="tel:+74996776229">+7 (499) 677 62 29</a> (Россия)</p>
+                            <p>
+                            	<a href="tel:+380443531315">+38 (044) 353 13 15 </a>(Украина)</p>
+                            <p>
+                            	<a href="tel:+77019146111">+7 (701) 914 61 11</a>(Казахстан)</p>
+                        </div>
+                    </div>
+
+                    <div class="grid__item">
+                        <div class="contacts" >
+                            <p >© 2018 Кирилл Кафтаник. ФОП Кирилл Кафтаник ИНН 3277409373</p>
+                            <p >Юридический адрес: г. Запорожье, ул. Бульвар Центральный, 17, кв. 32, Все права защищены.</p>
+                            <p >По всем вопросам: 
+                            	<a href="mailto:support@kaftanik.com" title="По всем вопросам: support@kaftanik.com">office@sonmax.club</a> </p>
+                            <p >
+                                <a href="politic.html" title="Пользовательское соглашение" target="_blank">Пользовательское соглашение</a>  |
+                                <a href="mailing.html" title="Соглашение на обработку персональных данных" target="_blank">Соглашение на обработку персональных данных</a>  |
+                                <a href="otkaz.html" title="Отказ от ответственности" target="_blank">Отказ от ответственности</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+		</footer>
 	</div>
+	<script>
+		                $("#slider").slider();
+           
+    </script>
 </body>
 </html>
