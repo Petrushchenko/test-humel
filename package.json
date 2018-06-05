@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Petrushchenko/humel.git"
+    "url": "git+https://github.com/Petrushchenko/test-humel.git"
   },
   "author": "Petrushchenko",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Petrushchenko/humel/issues"
+    "url": "https://github.com/Petrushchenko/test-humel/issues"
   },
-  "homepage": "https://github.com/Petrushchenko/humel#readme",
+  "homepage": "https://github.com/Petrushchenko/test-humel/build/index.html",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
