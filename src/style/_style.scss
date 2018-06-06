@@ -120,18 +120,25 @@ body {
 	min-height: 55px;
     background-position: top left;
     background-repeat: no-repeat;
-    margin-left: -20px;
+    margin-left: -60px;
+    margin-right: -40px;
+    margin-bottom: -15px;
     padding: 55px 0 0 0;
     box-sizing:border-box;
+    background-color:$light-blue-color;
+    & + div {
+    	width: calc(100% + 80px);
+    	margin-left: -40px;
+    	background-color: #FFF;
+    }
 }
 .goods {
 	.step1{
 		@extend .step;
-		background-image: url('images/step-1.png');
+		background-image: url('../images/step-1.png');
 	}
 	&__wrapper {
-		background-color: #FFF;
-	    margin-top: -15px;
+		margin: 0 40px;
 	    padding: 40px 0;
 	}
 	&__caption {
@@ -148,10 +155,9 @@ body {
 	    }
 	}
 	&__calculator {
-		   	width: 100%;
-	   		margin: 0 auto;
-	    	box-sizing: border-box;
-	
+	   	width: 100%;
+   		margin: 0 auto;
+    	box-sizing: border-box;
 		.goods__items {
 			display: flex;
 			flex-wrap: wrap;
@@ -201,6 +207,28 @@ body {
 				    }
 				}
 			}
+		}
+		h2 {
+			font-size: 22px;
+		    text-transform: uppercase;
+		    font-weight: 700;
+		    margin: 34px 0 10px;
+		}
+		select {
+			font-size: 14px;
+		    padding: 10px 40px 10px 12px;
+		    border: none;
+		    color: #5d5d5d;
+		    background-size: 24px;
+		    background-repeat: no-repeat;
+		    background-position: right center;
+		    background-position-x: calc(100% - 17px);
+		    background-color: #efefef;
+		    width: 100%;
+		    max-width: 500px;
+		    cursor: pointer;
+		    outline: none;
+		    
 		}
 
 	}
@@ -252,6 +280,10 @@ body {
    	}
 }
 .calendar {
+	.step2{
+		@extend .step;
+		background-image: url('../images/step-2.png');
+	}
    	&__button {
    		@extend .button;
    		padding: 0 15px;
@@ -259,6 +291,10 @@ body {
    	}
 }
 .blank {
+	.step3{
+		@extend .step;
+		background-image: url('../images/step-3.png');
+	}
 	div.block {
 		margin-bottom: 124px;
 	}
