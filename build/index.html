@@ -297,9 +297,9 @@
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="js/jquery.ui.touch-punch.js"></script>
 	<script>
-		var prodCount = 50;
-		var currentProduct = '0';
-		var currentCountry = 'ru';
+		//var prodCount = 50;
+		//var currentProduct = '0';
+		//var currentCountry = 'ru';
 		var currentRangeValue = 0;
 		var maxValue = 10000;
 		var pimpStep = 10;
@@ -308,14 +308,13 @@
 			var video = $('.youplay');
 			var wdth = video.width();
 			video.css('height', wdth * 0.56);
-			console.log(wdth);
 		};
 		setVideo();
 
 		function setData() {
-			var productObj = calc[currentProduct];
+			var productObj = calc[currentProduct]||calc['0'];
 			var startOnePrice = productObj.start_price;
-			var deliveryOnePrice = productObj.delivery[currentCountry];
+			var deliveryOnePrice = productObj.delivery[currentCountry]||productObj.delivery['ru'];
 			var marketingOnePrice = productObj.marketing;
 			var marketOnePrice =  productObj.finish_price;
 			var summOne = startOnePrice + deliveryOnePrice + marketingOnePrice;
@@ -332,7 +331,7 @@
 			var dirtyMoney = Math.round(marketOnePrice * productCount * 100)/ 100;
 			var resultNotRounded = dirtyMoney - purchDelPrice - markeningPrice;
 			var res = Math.round(resultNotRounded * 100) / 100;
-
+			
 			$('#prod_delivery').text('$' + purchDelPrice);
 			$('#prod_marketing').text('$' + markeningPrice);
 			$('prod_market_price').text('$' + dirtyMoney);
@@ -348,7 +347,7 @@
 
 		$(function(){
 			$(window).resize(setVideo);
-			var a = $('#slider-range-min').slider({
+			$('#slider-range-min').slider({
 				range: 'min',
 				value: currentRangeValue,
 				max: maxValue,
@@ -360,11 +359,12 @@
 				/*create: function() {
 					for (var i = 0; i <= pimpStep; i++) {
 						var val = maxValue / pimpStep * i;
+						console.log(val);
 						$('#slider_pimps').append('<span onclick = "setVal('+val+')">'+val+'</span>');
 					};
 				}*/
 			})
-			console.log(a);
+			
 			$('#amount').text('$' + $('#slider-range-min').slider('value'));
 			$('.goods__items input').change(function() {
 				currentProduct = $(this).data('prod');
